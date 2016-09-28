@@ -82,8 +82,8 @@ void voltread() {
     Serial.print(maxmedium);
     Serial.print(",");
     Serial.println(myarray[6]);
-    if ( ((medium + 1.5) < maxmedium) && ((millis() / 60000) >= 0.5) ) { // if battery charged (average voltage is dropped 0.02v), but not in the firsts 11 mintues
-      Serial.println("average voltage is dropped 0.015v");
+    if ( ((medium + 3) < maxmedium) && ((millis() / 60000) >= 0.5) ) { // if battery charged (average voltage is dropped 0.02v), but not in the firsts 11 mintues
+      Serial.println("average voltage is dropped 0.004v");
       
       while(true){
         digitalWrite(13,HIGH);
